@@ -7,6 +7,9 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  vite: {
+    base: "/ichancy-policy-website/",
+  },
   tanstackStart: {
     base: "/ichancy-policy-website/",
     server: { entry: "server" },
