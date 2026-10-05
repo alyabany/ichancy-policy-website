@@ -30,13 +30,21 @@ jobs:
       - name: Build
         run: bun run build
 
+      - name: Prepare SPA 404
+        run: |
+          if [ -d "./dist/client" ]; then
+            cp ./dist/client/index.html ./dist/client/404.html 2>/dev/null || true
+          elif [ -d "./dist" ]; then
+            cp ./dist/index.html ./dist/404.html 2>/dev/null || true
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist"
+          path: "./dist/client"
 
   deploy:
     environment:
