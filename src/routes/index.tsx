@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-const LOGO_URL = "/tuco-logo.png";
+const LOGO_URL = `${import.meta.env.BASE_URL}tuco-logo.png`;
 import { FOOTER, HERO, LAST_UPDATED, LIMITS, LINKS, MAIN_SERVICES, MINI_SERVICES, NAV, RESPONSIBLE, STEPS, SUPPORT } from "@/config/site";
 import { POLICY, POLICY_INTRO } from "@/config/policy";
 
