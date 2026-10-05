@@ -7,6 +7,7 @@ import { POLICY, POLICY_INTRO } from "@/config/policy";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { name: "google-site-verification", content: "l4mMpk2Cvwfuh3S6zdnhQQh8NTuUlML8mzUeGC96lG0" },
       { title: "Tuco Bot — إيداع وسحب iChancy عبر تيليغرام" },
       { name: "description", content: "إيداع وسحب لحسابك على iChancy بسهولة وأمان عبر بوت تيليغرام Tuco Bot. الحدود، العمولات، والشروط كاملة." },
       { property: "og:title", content: "Tuco Bot — إيداع وسحب iChancy" },
