@@ -54,7 +54,7 @@ export const RESPONSIBLE = {
 
 export const SUPPORT = [
   { icon: "🤖", label: "بوت تيليغرام", handle: "@ichancy_tuco_bot", href: LINKS.bot },
-  { icon: "💬", label: "الدعم على تيليغرام", handle: "@EN_KHIDER", href: LINKS.support },
+  { icon: "💬", label: "الدعم على تيليغرام", handle: "@TUCO_ROBERT", href: LINKS.support },
 ];
 
 export const FOOTER = {
