@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/tuco-logo.png.asset.json";
+const LOGO_URL = "/tuco-logo.png";
 import { FOOTER, HERO, LAST_UPDATED, LIMITS, LINKS, MAIN_SERVICES, MINI_SERVICES, NAV, RESPONSIBLE, STEPS, SUPPORT } from "@/config/site";
 import { POLICY, POLICY_INTRO } from "@/config/policy";
 
@@ -65,7 +65,7 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
         <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
           <a href="#home" className="flex min-w-0 items-center gap-2">
-            <img src={logo.url} alt="شعار Tuco Bot" className="h-9 w-9 shrink-0 rounded-full" />
+            <img src={LOGO_URL} alt="شعار Tuco Bot" className="h-9 w-9 shrink-0 rounded-full" />
             <span className="steel-text font-display text-lg font-black" dir="ltr">Tuco Bot</span>
           </a>
           <ul className="hidden items-center gap-6 text-sm text-muted-foreground lg:flex">
@@ -88,7 +88,7 @@ function Index() {
         <section id="home" className="mx-auto flex max-w-4xl flex-col items-center px-5 pb-12 pt-12 text-center sm:pt-20">
           <div className="relative mb-8">
             <div className="animate-pulse-glow absolute inset-0 rounded-full bg-primary/40 blur-3xl" aria-hidden />
-            <img src={logo.url} alt="Tuco Bot" width={260} height={260} className="animate-floaty relative h-52 w-52 rounded-full sm:h-64 sm:w-64" />
+            <img src={LOGO_URL} alt="Tuco Bot" width={260} height={260} className="animate-floaty relative h-52 w-52 rounded-full sm:h-64 sm:w-64" />
           </div>
           <h1 className="steel-text text-3xl font-black leading-tight sm:text-5xl">{HERO.title}</h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">{HERO.subtitle}</p>
@@ -257,7 +257,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2">
           <div>
             <div className="flex items-center gap-2">
-              <img src={logo.url} alt="" className="h-10 w-10 rounded-full" />
+              <img src={LOGO_URL} alt="" className="h-10 w-10 rounded-full" />
               <span className="steel-text font-display text-xl font-black" dir="ltr">Tuco Bot</span>
             </div>
             <p className="mt-3 max-w-sm leading-8 text-muted-foreground">{FOOTER.desc}</p>
