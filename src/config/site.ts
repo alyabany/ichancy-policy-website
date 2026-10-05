@@ -1,7 +1,7 @@
 // All editable text, links and numbers live here.
 export const LINKS = {
   bot: "https://t.me/ichancy_tuco_bot",
-  support: "https://t.me/EN_KHIDER",
+  support: "https://t.me/TUCO_ROBERT",
 };
 
 export const LAST_UPDATED = "4 أكتوبر 2026";
