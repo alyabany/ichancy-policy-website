@@ -228,8 +228,8 @@ function Index() {
 
         {/* responsible gambling */}
         <section className="mx-auto max-w-4xl px-5 py-10">
-          <div className="reveal bevel border border-[#F5B942]/50 bg-[#F5B942]/5 p-6 shadow-[0_0_24px_rgba(245,185,66,0.15)]">
-            <h2 className="mb-3 text-xl font-black text-[#F5B942]">{RESPONSIBLE.title}</h2>
+          <div className="reveal bevel border border-warn/50 bg-warn/5 p-6">
+            <h2 className="mb-3 text-xl font-black text-warn">{RESPONSIBLE.title}</h2>
             <p className="leading-9 text-muted-foreground">{RESPONSIBLE.text}</p>
           </div>
         </section>
