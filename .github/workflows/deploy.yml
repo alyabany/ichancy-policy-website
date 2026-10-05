@@ -30,12 +30,18 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Prepare SPA 404
+      - name: Check build output folder
         run: |
-          if [ -d "./dist/client" ]; then
-            cp ./dist/client/index.html ./dist/client/404.html 2>/dev/null || true
-          elif [ -d "./dist" ]; then
-            cp ./dist/index.html ./dist/404.html 2>/dev/null || true
+          echo "=== Checking output directories ==="
+          ls -la
+          if [ -d ".output/public" ]; then
+            echo "Found .output/public!"
+            ls -la .output/public
+            cp .output/public/index.html .output/public/404.html 2>/dev/null || true
+          elif [ -d "dist/client" ]; then
+            echo "Found dist/client!"
+            ls -la dist/client
+            cp dist/client/index.html dist/client/404.html 2>/dev/null || true
           fi
 
       - name: Setup Pages
@@ -44,7 +50,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist/client"
+          # هذا هو المجلد الذي يضع فيه Nitro الملفات المولدة مسبقاً (Prerendered)
+          path: ".output/public"
 
   deploy:
     environment:
